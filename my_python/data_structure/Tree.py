@@ -126,7 +126,7 @@ class Tree:
 
 def test():
 
-    root = TreeNode(1, TreeNode(2), TreeNode(3))
+    root = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(5, TreeNode(6), TreeNode(7)))
 
     print(Codec.serialize(root))
 
