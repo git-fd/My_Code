@@ -16,6 +16,54 @@ struct TreeNode // 节点结构定义
 };
 struct Tree // 二叉树的相关操作
 {
+
+    static void run()
+    {
+        int op = 0; // 操作数定义
+        do
+        {
+            // 菜单显示
+            cout << endl;
+            cout << "       二叉树后序非递归遍历系统       " << endl;
+            cout << "----------   1.系统测试    ----------" << endl;
+            cout << "----------   2.自定义测试  ----------" << endl;
+            cout << "----------   0.退出系统    ----------" << endl;
+            cout << "请输入您的选择：";
+            cin >> op;
+            // 操作
+            switch (op)
+            {
+            case 1:
+                Tree::print(Tree::create(vector<int>{3, 9, 20, 15, 7}, vector<int>{9, 3, 15, 20, 7}));
+                break;
+            case 2:
+                int t;
+                cout << "请选择建树方式（1.先序递归建树，2.前序中序序列建树）：";
+                cin >> t;
+                if (t == 1)
+                {
+                    cout << "按照先序递归输入二叉树（#表示结点为空）：";
+                    Tree::print(Tree::create());
+                }
+                else
+                {
+                    int n;
+                    cout << "请输入结点个数：";
+                    cin >> n;
+                    vector<int> pre(n), in(n);
+                    cout << "请输入先序遍历：";
+                    for (auto &x : pre)
+                        cin >> x;
+                    cout << "请输入中序遍历：";
+                    for (auto &x : in)
+                        cin >> x;
+                    Tree::print(Tree::create(pre, in));
+                }
+                break;
+            }
+        } while (op);
+    }
+
     static vector<int> postorder(TreeNode *root) // 后序非递归遍历
     {
         vector<int> res;            // 定义结果保存数组
@@ -74,6 +122,7 @@ struct Tree // 二叉树的相关操作
             cout << x << ' ';
         cout << endl;
     }
+
 private:
     static void printTree(TreeNode *root)
     {
@@ -156,50 +205,3 @@ private:
         return res;
     }
 };
-int menu()
-{
-    int op = 0; // 操作数定义
-    do
-    {
-        // 菜单显示
-        cout << endl;
-        cout << "       二叉树后序非递归遍历系统       " << endl;
-        cout << "----------   1.系统测试    ----------" << endl;
-        cout << "----------   2.自定义测试  ----------" << endl;
-        cout << "----------   0.退出系统    ----------" << endl;
-        cout << "请输入您的选择：";
-        cin >> op;
-        // 操作
-        switch (op)
-        {
-        case 1:
-            Tree::print(Tree::create(vector<int>{3, 9, 20, 15, 7}, vector<int>{9, 3, 15, 20, 7}));
-            break;
-        case 2:
-            int t;
-            cout << "请选择建树方式（1.先序递归建树，2.前序中序序列建树）：";
-            cin >> t;
-            if (t == 1)
-            {
-                cout << "按照先序递归输入二叉树（#表示结点为空）：";
-                Tree::print(Tree::create());
-            }
-            else
-            {
-                int n;
-                cout << "请输入结点个数：";
-                cin >> n;
-                vector<int> pre(n), in(n);
-                cout << "请输入先序遍历：";
-                for (auto &x : pre)
-                    cin >> x;
-                cout << "请输入中序遍历：";
-                for (auto &x : in)
-                    cin >> x;
-                Tree::print(Tree::create(pre, in));
-            }
-            break;
-        }
-    } while (op);
-    return 0;
-}
