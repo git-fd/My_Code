@@ -1,33 +1,28 @@
 ### 学习笔记目录
 
-- [**markdown**](./markdown.md)
+- [markdown](./markdown.md)
 
-- [***c++***](./c%2B%2B/)
-  - [main.cpp](./c%2B%2B/main.cpp)
+- ***my_cpp***
+  - [main.cpp](./my_cpp/main.cpp)
+  - [*tree*](./my_cpp/tree/)
+  
+- ***my_java***
+  - [Main.java](./my_java/Main.java)
+  - [*encryption*](./my_java/encryption/)
 
-- [***java***](./java/)
-  - [Main.java](/java/Main.java)
+- ***my_javascript***
+  - [main.js](./my_javascript/main.js)
 
-- [***python***](./python/)
-  - [*Basic*](./python/Basic/)
-    - [dic_set.py](./python/Basic/dict_set.py)
-    - [file_try.py](./python/Basic/file_try.py)
-    - [function.py](./python/Basic/function.py)
-    - [list_tuple.py](./python/Basic/list_tuple.py)
-    - [sequence.py](./python/Basic/sequence.py)
-    - [str.py](./python/Basic/str.py)
-  - [*Data_structure*](./python/Data_structure/)
-    - [Tree.py](./python/Data_structure/Tree.py)
-  - [main.py](./python/main.py)
+- ***my_linux***
+  - [main.sh](./my_linux/main.sh)
+  - [*note*](./my_linux/note/)
 
-- [***linux***](./linux/)
-  - [1_file_oper.md](./linux/1_file_oper.md)
-  - [2_tmux_vim.md](./linux/2_tmux_vim.md)
-  - [3_shell.md](./linux/3_shell.md)
-  - [4_ssh_scp.md](./linux/4_ssh_scp.md)
-  - [5_git.md](./linux/5_git.md)
-  - [6_pipeline_command.md](./linux/6_pipeline_command.md)
-  - [7_docker.md](./linux/7_docker.md)
+- ***my_python***
+  - [main.py](./my_python/main.py)
+  - [*note*](./my_python/note/)
 
-- [***res***](./res/)
+- ***my_res***
   - [chinese_youth.jpg](./res/chinese_youth.jpg)
+
+- ***my_sql***
+  - [main.sql](./my_sql/main.sql)
